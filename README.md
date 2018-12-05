@@ -1,5 +1,22 @@
 # touchscreen-focaltech-opi
 
+
+#update 
+
+since the first time I installed the touchscreen: 
+- I compiled a new kernel 4.14.83-sunxi (which is different to 3)
+- the touchscreen driver has changed as wel :  edt-ft5x06
+- instead of the fex-file, now device tree overlays are used
+
+one can generate :
+# armbian-add-overlay i2c-edt-ft5x06.dts (here is described how the screen is connected to the GPIO)
+
+and armbianEnv.txt (under boot) gets adapted automatically
+
+(in armianEnv.txt one needs to enable the i2c0 overlay as well : example included)
+
+
+
 I used the touchscreen from an old tablet (odys space : yeah really)
 
 This was a capacitive focaltech touchscreen with an i2c interface (twowire)
