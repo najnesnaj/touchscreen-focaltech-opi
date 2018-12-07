@@ -10,18 +10,16 @@
 		__overlay__ {
 			#address-cells = <1>;
 			#size-cells = <0>;
-			edt-ft5x06@38 {
+			edt-ft5x06@39 {
 				compatible = "edt,edt-ft5406";
 				status = "okay";
 				reg = <0x39>;
 				interrupt-parent = <&pio>;
 				interrupts = <0 9 2>; /* PH9 IRQ_TYPE_EDGE_FALLING */
 				reset-gpios = <&pio 0 10 1>; /* PH6 GPIO_ACTIVE_LOW */
-				wake-gpios = <&pio 0 20 1>; /* PH7 GPIO_ACTIVE_LOW */
-				touchscreen-size-x = <800>;
-				touchscreen-size-y = <480>;
-				touchscreen-inverted-x;
-				touchscreen-swapped-x-y;
+				wake-gpios = <&pio 0 20 0>; /* PH7 GPIO_ACTIVE_LOW */
+				touchscreen-size-x = <1024>;
+				touchscreen-size-y = <768>;
 			};
 		};
 
