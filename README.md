@@ -25,10 +25,33 @@ adapt 40-libinput.conf
 
 
 
+#howto use armbian to compile kernel modules
 
-this was a procedure for kernel 3:
-procedure to install another firmware on a focaltech touchscreen :
+it only works on ubuntu bionic 18.04 x64
+(I installed it on google cloud)
 
+git clone --depth 1 https://github.com/armbian/build
+cd build
+./compile.sh
+
+this process generates a kernel, with updates, modules etc ....
+
+it packs it into deb packages in the output/debs directory
+you can install this on your armbian-device
+
+------------------------
+in order to avoid a recompilation of everything :
+
+under the build/cache/sources/linux-mainline-linux-4xxxy
+is the kernel source
+
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- modules SUBDIRS=drivers/input/touchscreen
+(I only want the focaltech touchscreen driver)
+
+
+
+
+I installed firmware on the touchscreen : (using version 3 kernel module) 
 
 wget http://www.freak-tab.de/finless/ft5x_firmware.zip
 
