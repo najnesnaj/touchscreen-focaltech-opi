@@ -3,7 +3,7 @@ logo=disabled
 console=both
 disp_mode=1920x1080p60
 overlay_prefix=sun8i-h3
-rootdev=UUID=3d863bb3-b616-4229-94e7-8c92ac95501a
+rootdev=UUID=6f69bb7c-46e4-44ff-af85-389d1160b82c
 rootfstype=ext4
 overlays=i2c0
 user_overlays=i2c-edt-ft5x06

@@ -11,7 +11,7 @@
 			#address-cells = <1>;
 			#size-cells = <0>;
 			edt-ft5x06@39 {
-				compatible = "edt,edt-ft5406";
+				compatible = "edt,edt-ft5406","edt, edt-ft5x06";
 				status = "okay";
 				reg = <0x39>;
 				interrupt-parent = <&pio>;

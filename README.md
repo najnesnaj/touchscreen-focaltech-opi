@@ -2,7 +2,6 @@
 I used the capacitive touchscreen from an old tablet (odys space )
 
 
-#update 
 
 since the first time I installed the touchscreen: 
 - I compiled a new kernel 4.14.83-sunxi (specify drivers/input/touchscreen) 
@@ -12,17 +11,18 @@ since the first time I installed the touchscreen:
 one can generate :
  armbian-add-overlay i2c-edt-ft5x06.dts (here is described how the screen is connected to the GPIO)
 
+
 and armbianEnv.txt (under boot) gets adapted automatically
+
+
 
 (in armianEnv.txt one needs to enable the i2c0 overlay as well : example included)
 
 
-in /etc/modules add edt-ft5x06
 
 
-apt-get install xserver-xorg-input-evdev
 adapt 40-libinput.conf
-
+(see example)
 
 
 #howto use armbian to compile kernel modules
@@ -49,7 +49,14 @@ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- modules SUBDIRS=drivers/input/t
 (I only want the focaltech touchscreen driver)
 
 
+eventually I copied the driver from the linus torvalts directory (updated jan 2018)
 
+
+
+
+
+
+----this was applicable on the previous kernel module (it flashed new firmware to touchscreen)
 
 I installed firmware on the touchscreen : (using version 3 kernel module) 
 
