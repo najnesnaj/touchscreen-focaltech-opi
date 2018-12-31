@@ -4,7 +4,7 @@ I used the capacitive touchscreen from an old tablet (odys space )
 
 
 since the first time I installed the touchscreen: 
-- I compiled a new kernel 4.14.83-sunxi (specify drivers/input/touchscreen) 
+- I compiled a new kernel 4.14.84-sunxi (specify drivers/input/touchscreen) 
 - the touchscreen driver has changed as wel :  edt-ft5x06
 - instead of the fex-file, now device tree overlays are used
 
